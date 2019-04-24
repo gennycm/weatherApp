@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Main Linear Layout Start -->
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10sp">
+
+        <!-- Text input for city -->
+        <EditText
+            android:id="@+id/cityEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorLovey"
+            android:drawableEnd="@drawable/ic_baseline_search_24px"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/cityEditTxtHint"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textColor="@color/colorLovey" />
+
+        <!-- TextView for City Name -->
+        <TextView
+            android:id="@+id/cityNameTxtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/defaultCityName"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Material.Display2"
+            android:textColor="@color/colorFallFor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- ImageView for Temperature: changes according to response -->
+        <ImageView
+            android:id="@+id/weatherIconImgV"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_01d" />
+
+        <!-- TextView for Temperature -->
+        <TextView
+            android:id="@+id/temperatureTxtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/temperature"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Material.Display3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!-- Textview for Main weather  -->
+        <TextView
+            android:id="@+id/mainWeatherTxtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="Cloudy"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:textColor="@color/colorLovey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Textview for Main weather description -->
+        <TextView
+            android:id="@+id/mainWeatherDescTxtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="Overcast clouds"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:textColor="@color/colorOrangeRed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Textview for Minimum and Maximum weather in C -->
+        <TextView
+            android:id="@+id/minMaxTxtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/minMax"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Weather percentages Start-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <!-- Humidity start -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <!-- Humidity Percentage -->
+                <TextView
+                    android:id="@+id/humidityPercentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/humidityString"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Material.Large"
+                    android:textColor="@color/colorClick"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Humidity Text -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Humidity"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Material.Large"
+                    android:textColor="@color/colorClick"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            <!-- Humidity end -->
+            </LinearLayout>
+
+            <!-- Clouds start-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <!-- Clouds Percentage -->
+                <TextView
+                    android:id="@+id/cloudsPercentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/cloudsStr"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Material.Large"
+                    android:textColor="@color/drawablesFillColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Clouds text -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Clouds"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Material.Large"
+                    android:textColor="@color/drawablesFillColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            <!-- Clouds end-->
+            </LinearLayout>
+        <!-- Weather percentages End-->
+        </LinearLayout>
+    <!-- Main Layout End -->
+    </LinearLayout>
+</RelativeLayout>

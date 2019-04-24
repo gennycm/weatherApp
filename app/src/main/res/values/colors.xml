@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Author: Genny Centeno
+Last updated on: Nov 8/2018
+ -->
+
+<!-- Palette from: https://www.colourlovers.com/palette/301154/Influenza -->
+<resources>
+<color name="colorPrimary">#3F51B5</color>
+<color name="colorPrimaryDark">#303F9F</color>
+<color name="colorAccent">#ff4081</color>
+<color name="drawablesFillColor">#601848</color>
+<color name="colorLovey">#C04848</color>
+<color name="colorOrangeRed">#F07241</color>
+<color name="colorClick">#480048</color>
+<color name="colorFallFor">#300030</color>
+</resources>

@@ -1,0 +1,21 @@
+<!--
+Author: Genny Centeno
+Last updated on: Nov 8/2018
+ -->
+<resources>
+    <!-- App Name -->
+    <string name="app_name">WeatherApp</string>
+    <!-- Default city name Text View String -->
+    <string name="defaultCityName">Halifax</string>
+    <!-- Minimun and Maximum temperature Text View String -->
+    <string name="minMax">Min. %1$d°C Max. %2$d°C.</string>
+    <!-- Temperature Text View String -->
+    <string name="temperature">%1$d°C</string>
+    <!-- Humidity Text View String -->
+    <string name="humidityString">%1$d%%</string>
+    <!-- Clouds Text View String -->
+    <string name="cloudsStr">%1$d%%</string>
+    <!-- City Edit Text View Hint String -->
+    <string name="cityEditTxtHint">Enter a city: e.g Halifax</string>
+</resources>
+
